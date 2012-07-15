@@ -155,6 +155,16 @@ a.button span {
 #download-zip span {
   background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
 }
+
+#view-demo {
+   background: #fff url(../images/128.png) 0px 20% no-repeat;
+}
+
+#view-demo span {
+   padding-left: 91px;
+   padding-bottom: 20px;
+}
+
 #download-tar-gz span {
   background: transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat;
 }
@@ -362,6 +372,15 @@ footer a:hover {
     width: 94%;
     margin: 0 auto;
   }
+}
+
+.screenshots {
+    display: inline-block;
+    width: 200px;
+}
+
+.features li{
+    padding-top: 10px;
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
