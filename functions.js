@@ -105,7 +105,6 @@ function populateData(section) {
 function getMediaIconImg(data) {
 	if (data.is_self === true) {
 		return '<img class="reddit-text" src="static/img/text.png"/>';
-		
 	}
 	if (data.domain == 'youtube.com' || data.domain == 'youtu.be' || ~data.domain.indexOf('bandcamp.com')) {
 		return '<img class="reddit-movie" src="static/img/movie.png"/>';
