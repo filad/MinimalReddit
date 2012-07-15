@@ -374,6 +374,8 @@ footer a:hover {
   }
 }
 
+
+/*filkor*/
 .screenshots {
     display: inline-block;
     width: 200px;
@@ -381,6 +383,10 @@ footer a:hover {
 
 .features li{
     padding-top: 10px;
+}
+
+img {
+    border-radius: 10px;
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
