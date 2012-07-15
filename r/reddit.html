@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="hu-HU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MinimalReddit</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/jquery.masonry.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/bootstrap-typeahead-custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/jquery.waitforimages.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/modernizr.bg-size.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="static/jquery-ui-1.8.21.custom.accordion.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="defaults.js" type="text/javascript" charset="utf-8"></script>
+	<script src="functions.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	
+	
+	<link rel="stylesheet" type="text/css" href="static/buttons-necolas.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="static/colorPicker/colorPicker.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+
+<div id="header">
+	
+</div>
+
+<body>
+	<div align="center"><a id="edit-link" class="button icon edit">Edit subreddits..</a></div>
+	<div id="subreddit-manager">
+		<input id="search" type="text"  />
+	</div>
+
+	<div id="container">
+	</div>
+
+	<a id="hide-button" class="button">Hide me</a>
+	<a id="settings-button" class="button icon settings">
+		Settings
+	</a>
+	
+	<div id="settings">
+		<h1>Settings</h1>
+		<div id="settings-accordion">
+			<h3><a href="#">- Background images (album)</a></h3>
+			<div>
+				<p>
+				Select an Imgur album url. It will randomly rotate the images.<br>
+				<i>Example url: http://imgur.com/a/aTRDX</i>
+				<input id="albumUrlInput" type="text" class="">
+				<span id="albumSuccessLoader"></span>
+				<a id="saveAlbumBtn" class="button savebutton">Set album images</a>
+				</p>
+			</div>
+			
+			<h3><a href="#">- Set single background image</a></h3>
+			<div>
+				<p>
+					Url to a single image<br> (like <i>http://i.imgur.com/KEoith.jpg</i>)
+					<input id="BackImgInput" type="text" class="">
+					<span id="SingleImgSuccess"></span>
+					<a id="saveSingleBtn" class="button savebutton">Set this ONE background image</a>
+				</p>
+			</div>
+			
+			<h3><a href="#">- Background Color</a></h3>
+			<div>
+				<p>
+				Set your color:
+				<div id="colorPicker" onmousedown="Picker.core('demo',event)" style="top: -25px; left: 110px; z-index: 10007; ">
+				<div class="north"><span id="mHEX">94FF47</span></div>
+				<div class="south" id="mSpec" style="height: 128px; width: 128px;" onmousedown="Picker.core('mCur',event)">
+					<div id="mCur" style="z-index: 10006; left: 90px; top: 87px; "></div>
+					<img src="static/colorPicker/circle.png" onmousedown="return false;" ondrag="return false;">
+					
+				</div>
+				</div>
+					
+				
+				<a id="saveColorBtn" class="button savebutton">Save this color</a>
+				</p>
+			</div>			
+			
+			<h3><a href="#">- More colorful!</a></h3>
+			<div>
+				<p>
+					<!--More colors, for the love of GOD!-->
+					Make subreddit sections more colorful.
+					<label class="checkbox">
+						<input type="checkbox" id="colorfulChkBox"/>
+						More colorful!
+					</label>
+					<span id="colorfulnessSuccess"></span>
+					<a id="moreColorfulBtn" class="button savebutton">Save</a>
+				</p>
+			</div>			
+		</div>
+	</div>
+
+<script src="static/colorPicker/colorPicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="main.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
