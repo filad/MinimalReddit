@@ -76,6 +76,7 @@ function populateData(section) {
 				
 			$('#comment-icon-'+section+'-' + item.data.name).click(function(){
 				showCommentBox(item.data.name,item.data.permalink,item.data.num_comments,section);
+				$('#container').masonry('reload');
 			});
 				
 		});
@@ -121,7 +122,9 @@ function showCommentBox(linkId, permalink, numComments, section) {
 	
 	//check if we loaded the top comment before in this particular section
 	if ($('#comment-'+section+'-'+linkId).exists()) {
-		$('#comment-'+section+'-'+linkId).fadeToggle('fast');
+		$('#comment-'+section+'-'+linkId).fadeToggle('fast', function(){
+			$('#container').masonry('reload');
+		});
 		return;	
 	}
 
@@ -146,14 +149,15 @@ function showCommentBox(linkId, permalink, numComments, section) {
 		var decoded = $("<div/>").html(item.data.body_html).text();
 		//replace anchors, to show comment links on a new tab
 		decoded = decoded.replace(/<a href/g,'<a target="_blank" href');
-		
+		console.log($(decoded).contents());
 		
 		$comment.append('<div class="comment-social"><span class="comment-username">'+item.data.author+'</span> <span class="comment-points">'+(item.data.ups - item.data.downs)+' points</span></div>');
 		
 		//remove the <div> wrapper what reddit gives us. 
 		//.contents() returns the text nodes also - unlike children()
-		$comment.append($(decoded).contents());
+		$comment.append($(decoded).contents().hide().fadeIn());
 		$loaderImg.hide();
+		$('#container').masonry('reload');
 	}); 
 }
 
