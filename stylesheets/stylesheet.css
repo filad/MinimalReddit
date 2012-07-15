@@ -379,6 +379,7 @@ footer a:hover {
 .screenshots {
     display: inline-block;
     width: 200px;
+    margin: 2px;
 }
 
 .features li{
@@ -386,7 +387,8 @@ footer a:hover {
 }
 
 img {
-    border-radius: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(18,7,6,0.3);
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
