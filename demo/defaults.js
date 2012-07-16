@@ -8,7 +8,7 @@ var Settings = {
 	colors : {
 		'light-gray' : '#eeeeee',
 	},
-	colorfulness : 0.6, //0.2, or 0.6
+	colorfulness : 0.2, //0.2, or 0.6
 	backgroundImgType: 'single',  //could be: 'none, single, or album'
 	backgroundColor: '#5aa', /*#FF2351*/
 	singleBackgroundUrl: 'http://i.imgur.com/qJYSo.jpg',//url when the background image type is 'single' example: http://i.imgur.com/thJvn.jpg
