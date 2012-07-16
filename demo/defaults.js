@@ -1,6 +1,6 @@
 /**
  * Default initial values..shows the structure of the Settings object
- * We will store it later in the localStorage
+ * We will store this in the localStorage
  */
 var Settings = {
 	version: '1.0',
